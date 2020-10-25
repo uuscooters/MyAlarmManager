@@ -56,20 +56,27 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, DatePickerFragme
         }
     }
 
+//    hasil callback dari DatePickerFragment.DialogDateListener
    override fun onDialogDateSet(tag: String?, year: Int, month: Int, dayOfMonth: Int) {
+//    Siapkan date formatter-nya terlebih dahulu
         val calendar = Calendar.getInstance()
         calendar.set(year, month, dayOfMonth)
 
+//       Set text dari textView once
         val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
         tv_once_date.text = dateFormat.format(calendar.time)
     }
 
+//    hasil callback dari TimePickerFragment.DialogTimeListener
    override fun onDialogTimeSet(tag: String?, hourOfDay: Int, minute: Int) {
+//    Siapkan date formatter-nya terlebih dahulu
         val calendar = Calendar.getInstance()
         calendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
         calendar.set(Calendar.MINUTE, minute)
         val dateFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
-        when (tag) {
+
+//       Set text dari textView once
+       when (tag) {
             TIME_PICKER_ONCE_TAG -> tv_once_time.text = dateFormat.format(calendar.time)
             else -> {
             }
