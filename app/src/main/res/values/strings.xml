@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyAlarmManager</string>
+    <string name="one_time_alarm">One Time Alarm</string>
+    <string name="alarm_date">alarm date</string>
+    <string name="alarm_time">Alarm Time</string>
+    <string name="alarm_message">Alarm Message</string>
+    <string name="set_one_time_alarm">set one time alarm</string>
+</resources>
